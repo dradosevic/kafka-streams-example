@@ -1,0 +1,16 @@
+kafka:
+  bootstrap:
+    servers: localhost:9092
+  streams:
+    default:
+      num:
+        stream:
+          threads: 5
+      application:
+        id: stream-app-1
+    word-count:
+      num:
+        stream:
+          threads: 10
+      application:
+        id: stream-app-2
