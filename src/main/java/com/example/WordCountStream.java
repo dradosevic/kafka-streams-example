@@ -32,7 +32,7 @@ public class WordCountStream {
 
     // tag::wordCountStream[]
     @Singleton
-//    @Named(STREAM_WORD_COUNT)
+    @Named(STREAM_WORD_COUNT)
     KStream<String, String> wordCountStream(@Named(STREAM_WORD_COUNT) ConfiguredStreamBuilder builder) { // <3>
         // set default serdes
         Properties props = builder.getConfiguration();
@@ -65,7 +65,7 @@ public class WordCountStream {
     public static final String NAMED_WORD_COUNT_OUTPUT = "named-word-count-output";
 
     @Singleton
-//    @Named(DEFAULT_STREAM)
+    @Named(DEFAULT_STREAM)
     KStream<String, String> myStream(
             @Named(DEFAULT_STREAM) ConfiguredStreamBuilder builder) {
 
